@@ -1,0 +1,2 @@
+beginner_tutorials
+-DCATKIN_DEVEL_PREFIX=/home/nt/LearnRobocupOP/devel -DCMAKE_INSTALL_PREFIX=/home/nt/LearnRobocupOP/install -G Unix Makefiles
