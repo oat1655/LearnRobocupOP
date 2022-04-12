@@ -1,0 +1,8 @@
+prefix=/home/nt/LearnRobocupOP/install
+
+Name: rchomeedu_follower
+Description: Description of rchomeedu_follower
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

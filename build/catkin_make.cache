@@ -1,2 +1,2 @@
-beginner_tutorials
+audio_common/audio_capture:audio_common/audio_common:audio_common/audio_common_msgs:audio_common/audio_play:audio_common/sound_play:beginner_tutorials:dynamixel_motor/dynamixel_controllers:dynamixel_motor/dynamixel_driver:dynamixel_motor/dynamixel_motor:dynamixel_motor/dynamixel_msgs:dynamixel_motor/dynamixel_tutorials:rc-home-edu-learn-ros/rchomeedu_apps/rchomeedu_follower:rc-home-edu-learn-ros/rchomeedu_apps/rchomeedu_partybot:rc-home-edu-learn-ros/rchomeedu_arm:rc-home-edu-learn-ros/rchomeedu_navigation:rc-home-edu-learn-ros/rchomeedu_speech:rc-home-edu-learn-ros/rchomeedu_vision
 -DCATKIN_DEVEL_PREFIX=/home/nt/LearnRobocupOP/devel -DCMAKE_INSTALL_PREFIX=/home/nt/LearnRobocupOP/install -G Unix Makefiles

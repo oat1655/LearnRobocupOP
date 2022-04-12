@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -22,6 +25,48 @@ BUILD_GTEST:BOOL=OFF
 
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
+
+//Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+//Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -245,6 +290,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
 
@@ -284,6 +332,39 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
+
+//Value Computed by CMake
+audio_capture_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/audio_common/audio_capture
+
+//Value Computed by CMake
+audio_capture_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/audio_common/audio_capture
+
+//Value Computed by CMake
+audio_common_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/audio_common/audio_common
+
+//Value Computed by CMake
+audio_common_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/audio_common/audio_common
+
+//Value Computed by CMake
+audio_common_msgs_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/audio_common/audio_common_msgs
+
+//The directory containing a CMake configuration file for audio_common_msgs.
+audio_common_msgs_DIR:PATH=/home/nt/LearnRobocupOP/devel/share/audio_common_msgs/cmake
+
+//Value Computed by CMake
+audio_common_msgs_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/audio_common/audio_common_msgs
+
+//Value Computed by CMake
+audio_play_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/audio_common/audio_play
+
+//Value Computed by CMake
+audio_play_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/audio_common/audio_play
+
 //Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/beginner_tutorials
 
@@ -293,8 +374,74 @@ beginner_tutorials_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/beginner_tutori
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/melodic/share/control_msgs/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/melodic/share/diagnostic_msgs/cmake
+
+//Value Computed by CMake
+dynamixel_controllers_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/dynamixel_motor/dynamixel_controllers
+
+//The directory containing a CMake configuration file for dynamixel_controllers.
+dynamixel_controllers_DIR:PATH=/home/nt/LearnRobocupOP/devel/share/dynamixel_controllers/cmake
+
+//Value Computed by CMake
+dynamixel_controllers_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/dynamixel_motor/dynamixel_controllers
+
+//Value Computed by CMake
+dynamixel_driver_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/dynamixel_motor/dynamixel_driver
+
+//The directory containing a CMake configuration file for dynamixel_driver.
+dynamixel_driver_DIR:PATH=/home/nt/LearnRobocupOP/devel/share/dynamixel_driver/cmake
+
+//Value Computed by CMake
+dynamixel_driver_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/dynamixel_motor/dynamixel_driver
+
+//Value Computed by CMake
+dynamixel_motor_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/dynamixel_motor/dynamixel_motor
+
+//Value Computed by CMake
+dynamixel_motor_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/dynamixel_motor/dynamixel_motor
+
+//Value Computed by CMake
+dynamixel_msgs_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/dynamixel_motor/dynamixel_msgs
+
+//The directory containing a CMake configuration file for dynamixel_msgs.
+dynamixel_msgs_DIR:PATH=/home/nt/LearnRobocupOP/devel/share/dynamixel_msgs/cmake
+
+//Value Computed by CMake
+dynamixel_msgs_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/dynamixel_motor/dynamixel_msgs
+
+//Value Computed by CMake
+dynamixel_tutorials_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/dynamixel_motor/dynamixel_tutorials
+
+//Value Computed by CMake
+dynamixel_tutorials_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/dynamixel_motor/dynamixel_tutorials
+
+//The directory containing a CMake configuration file for gencpp.
+gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for geneus.
+geneus_DIR:PATH=/opt/ros/melodic/share/geneus/cmake
+
+//The directory containing a CMake configuration file for genlisp.
+genlisp_DIR:PATH=/opt/ros/melodic/share/genlisp/cmake
+
+//The directory containing a CMake configuration file for genmsg.
+genmsg_DIR:PATH=/opt/ros/melodic/share/genmsg/cmake
+
+//The directory containing a CMake configuration file for gennodejs.
+gennodejs_DIR:PATH=/opt/ros/melodic/share/gennodejs/cmake
+
+//The directory containing a CMake configuration file for genpy.
+genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/gtest/googlemock
@@ -348,8 +495,47 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
+//The directory containing a CMake configuration file for message_generation.
+message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
+
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+
+//Value Computed by CMake
+rchomeedu_arm_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/rc-home-edu-learn-ros/rchomeedu_arm
+
+//Value Computed by CMake
+rchomeedu_arm_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/rc-home-edu-learn-ros/rchomeedu_arm
+
+//Value Computed by CMake
+rchomeedu_follower_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/rc-home-edu-learn-ros/rchomeedu_apps/rchomeedu_follower
+
+//Value Computed by CMake
+rchomeedu_follower_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/rc-home-edu-learn-ros/rchomeedu_apps/rchomeedu_follower
+
+//Value Computed by CMake
+rchomeedu_navigation_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/rc-home-edu-learn-ros/rchomeedu_navigation
+
+//Value Computed by CMake
+rchomeedu_navigation_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/rc-home-edu-learn-ros/rchomeedu_navigation
+
+//Value Computed by CMake
+rchomeedu_partybot_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/rc-home-edu-learn-ros/rchomeedu_apps/rchomeedu_partybot
+
+//Value Computed by CMake
+rchomeedu_partybot_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/rc-home-edu-learn-ros/rchomeedu_apps/rchomeedu_partybot
+
+//Value Computed by CMake
+rchomeedu_speech_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/rc-home-edu-learn-ros/rchomeedu_speech
+
+//Value Computed by CMake
+rchomeedu_speech_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/rc-home-edu-learn-ros/rchomeedu_speech
+
+//Value Computed by CMake
+rchomeedu_vision_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/rc-home-edu-learn-ros/rchomeedu_vision
+
+//Value Computed by CMake
+rchomeedu_vision_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/rc-home-edu-learn-ros/rchomeedu_vision
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -372,8 +558,17 @@ rospy_DIR:PATH=/opt/ros/melodic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
+//Value Computed by CMake
+sound_play_BINARY_DIR:STATIC=/home/nt/LearnRobocupOP/build/audio_common/sound_play
+
+//Value Computed by CMake
+sound_play_SOURCE_DIR:STATIC=/home/nt/LearnRobocupOP/src/audio_common/sound_play
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/opt/ros/melodic/share/trajectory_msgs/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
@@ -383,6 +578,34 @@ xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_DEBUG
+Boost_ATOMIC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_RELEASE
+Boost_ATOMIC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
+Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
+Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/nt/LearnRobocupOP/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/nt/LearnRobocupOP/build/test_results
@@ -488,7 +711,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -529,6 +752,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.17()]
 //Details about finding Threads
@@ -538,6 +763,40 @@ GMOCK_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
 GMOCK_FROM_SOURCE_LIBRARIES:INTERNAL=gmock
 GMOCK_FROM_SOURCE_LIBRARY_DIRS:INTERNAL=/home/nt/LearnRobocupOP/build/gmock
 GMOCK_FROM_SOURCE_MAIN_LIBRARIES:INTERNAL=gmock_main
+GST1.0_CFLAGS:INTERNAL=-pthread;-I/usr/include/gstreamer-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GST1.0_CFLAGS_I:INTERNAL=
+GST1.0_CFLAGS_OTHER:INTERNAL=-pthread
+GST1.0_FOUND:INTERNAL=1
+GST1.0_INCLUDEDIR:INTERNAL=/usr/include/gstreamer-1.0
+GST1.0_INCLUDE_DIRS:INTERNAL=/usr/include/gstreamer-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GST1.0_LDFLAGS:INTERNAL=-lgstreamer-1.0;-lgobject-2.0;-lglib-2.0
+GST1.0_LDFLAGS_OTHER:INTERNAL=
+GST1.0_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+GST1.0_LIBRARIES:INTERNAL=gstreamer-1.0;gobject-2.0;glib-2.0
+GST1.0_LIBRARY_DIRS:INTERNAL=
+GST1.0_LIBS:INTERNAL=
+GST1.0_LIBS_L:INTERNAL=
+GST1.0_LIBS_OTHER:INTERNAL=
+GST1.0_LIBS_PATHS:INTERNAL=
+GST1.0_PREFIX:INTERNAL=/usr
+GST1.0_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/gstreamer-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GST1.0_STATIC_CFLAGS_I:INTERNAL=
+GST1.0_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+GST1.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gstreamer-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GST1.0_STATIC_LDFLAGS:INTERNAL=-lgstreamer-1.0;-lgmodule-2.0;-pthread;-ldl;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread
+GST1.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+GST1.0_STATIC_LIBDIR:INTERNAL=
+GST1.0_STATIC_LIBRARIES:INTERNAL=gstreamer-1.0;gmodule-2.0;dl;gobject-2.0;ffi;glib-2.0;pcre
+GST1.0_STATIC_LIBRARY_DIRS:INTERNAL=
+GST1.0_STATIC_LIBS:INTERNAL=
+GST1.0_STATIC_LIBS_L:INTERNAL=
+GST1.0_STATIC_LIBS_OTHER:INTERNAL=
+GST1.0_STATIC_LIBS_PATHS:INTERNAL=
+GST1.0_VERSION:INTERNAL=1.14.5
+GST1.0_gstreamer-1.0_INCLUDEDIR:INTERNAL=
+GST1.0_gstreamer-1.0_LIBDIR:INTERNAL=
+GST1.0_gstreamer-1.0_PREFIX:INTERNAL=
+GST1.0_gstreamer-1.0_VERSION:INTERNAL=
 GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
 GTEST_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
 GTEST_FROM_SOURCE_LIBRARIES:INTERNAL=gtest
@@ -553,10 +812,27 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_arguments_GST1.0:INTERNAL=gstreamer-1.0;REQUIRED
+__pkg_config_checked_GST1.0:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 
